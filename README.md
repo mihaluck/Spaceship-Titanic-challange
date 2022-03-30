@@ -1,12 +1,25 @@
-# ml-vechicles-and-plants-challenge
+# Spaceship-Titanic-challange
 
-Выполнение тестового задания по машинному обучению на классификацию изображений.
+Выполнение соревнования по машинному обучению на классификацию.
 
 ## Формулировка задачи
 
-Есть набор из 3 000 изображений, а так же `data.json` файл, содержащий разметку - принадлежность каждого изображения к типу, категории и подкатегории, и набор тегов для каждого изображения. 
+In this competition your task is to predict whether a passenger was transported to an alternate dimension during the Spaceship Titanic's collision with the spacetime anomaly. To help you make these predictions, you're given a set of personal records recovered from the ship's damaged computer system.
 
-Используя python и [этот датасет](https://drive.google.com/drive/folders/1wHOf6eGv2esYtqFbBuGW9eigoZhRDmMZ?usp=sharing) постройте и обучите модель, которая среди предложенных изображений выявляет машины и растения, и выводит на экран список файлов в каждой категории с указанием вероятности совпадения. 
+File and Data Field Descriptions
+train.csv - Personal records for about two-thirds (~8700) of the passengers, to be used as training data.
+PassengerId - A unique Id for each passenger. Each Id takes the form gggg_pp where gggg indicates a group the passenger is travelling with and pp is their number within the group. People in a group are often family members, but not always.
+HomePlanet - The planet the passenger departed from, typically their planet of permanent residence.
+CryoSleep - Indicates whether the passenger elected to be put into suspended animation for the duration of the voyage. Passengers in cryosleep are confined to their cabins.
+Cabin - The cabin number where the passenger is staying. Takes the form deck/num/side, where side can be either P for Port or S for Starboard.
+Destination - The planet the passenger will be debarking to.
+Age - The age of the passenger.
+VIP - Whether the passenger has paid for special VIP service during the voyage.
+RoomService, FoodCourt, ShoppingMall, Spa, VRDeck - Amount the passenger has billed at each of the Spaceship Titanic's many luxury amenities.
+Name - The first and last names of the passenger.
+Transported - Whether the passenger was transported to another dimension. This is the target, the column you are trying to predict.
+
+Используется python и датасет `train.csv`.
 
 ## Установка зависимостей
 
@@ -15,7 +28,7 @@
 Требуется установить дополнительные пакеты python:
 
 ```
-pip install jupyterlab tensorflow pandas matplotlib sklearn numpy
+pip install jupyterlab pandas sklearn xgboost
 ```
 
 ## Клонирование репозитория
@@ -23,7 +36,7 @@ pip install jupyterlab tensorflow pandas matplotlib sklearn numpy
 Клонировать репозиторий командой:
 
 ```
-git clone https://github.com/mihaluck/ml-vechicles-and-plants-challenge.git
+git clone https://github.com/mihaluck/Spaceship-Titanic-challange.git
 ```
 
 ## Запуск проекта
@@ -34,5 +47,5 @@ git clone https://github.com/mihaluck/ml-vechicles-and-plants-challenge.git
 jupyter lab
 ```
 
-В открывшенся окне jupyterlab внутри браузера выбрать файл `task.ipynb` и запустить его.
+В открывшенся окне jupyterlab внутри браузера выбрать файл `ML spaceship Titanic task` и запустить его.
 
